@@ -20,7 +20,7 @@ export default function SignInPage() {
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-y-3.5 gap-x-5">
               <SignInWithGoogle />
-              <SignInWithGithub />
+              {/* <SignInWithGithub /> */}
             </div>
             <div className="relative py-3 sm:py-5">
               <div className="absolute inset-0 flex items-center">

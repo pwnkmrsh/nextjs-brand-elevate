@@ -55,9 +55,7 @@ export default function Footer() {
                   />
                 </Link>
                 <p className="block text-sm text-gray-400 mb-9">
-                  A self-hosted AI starter kit built with Next.js, Tailwind CSS,
-                  and OpenAI integrations. Perfect for developers and startups
-                  to quickly build, deploy, and scale AI-powered SaaS products.
+                  Brand Elevate harnesses cutting-edge artificial intelligence to deliver tailored marketing strategies, streamlined content creation, and actionable insights. We understand your brand’s voice and craft customized content that not only resonates but drives tangible business growth.
                 </p>
                 <div className="flex">
                   <a
@@ -250,31 +248,31 @@ export default function Footer() {
                       href="/"
                       className="text-sm font-normal text-gray-400 transition hover:text-white"
                     >
-                      HTML File Upload
+                      Word Counter Tool
                     </Link>
                     <Link
                       href="/"
                       className="text-sm font-normal text-gray-400 transition hover:text-white"
                     >
-                      HTML website hosting
+                      Proofreader
                     </Link>
                     <Link
                       href="/"
                       className="text-sm font-normal text-gray-400 transition hover:text-white"
                     >
-                      Free Image Hosting
+                      Paraphrasing Tool
                     </Link>
                     <Link
                       href="/"
                       className="text-sm font-normal text-gray-400 transition hover:text-white"
                     >
-                      Upload PDF Online
+                      Summary Generator
                     </Link>
                     <Link
                       href="/"
                       className="text-sm font-normal text-gray-400 transition hover:text-white"
                     >
-                      Free Zip file hosting
+                      Paragraph Rewriter
                     </Link>
                   </nav>
                 </div>
@@ -317,21 +315,10 @@ export default function Footer() {
                   Stay In Touch
                 </span>
                 <p className="block mb-5 text-sm text-gray-400">
-                  Subscribe now for exclusive insights and offers!
+                  HO. C 169, Street no. 9, Kishan Kunj Near Budhi Mata Mandir, Shailendra Nagar, Raipur-492001 C.G.
+                  <br />Phone: +91 9806130001 +91 7224921234
+                  <br />Email: contact@brandelevate.in
                 </p>
-                <form>
-                  <div className="flex flex-col items-center gap-2 w-full sm:max-w-64">
-                    <input
-                      type="email"
-                      placeholder="Enter your email"
-                      className="w-full h-12 p-4 text-sm text-white border border-gray-700 rounded-full placeholder:text-center placeholder:text-gray-400 placeholder:text-sm text-center placeholder:font-normal focus:outline-0"
-                      required
-                    />
-                    <button className="w-full px-6 py-3 text-sm font-medium text-white transition rounded-full cursor-pointer bg-primary-500 hover:bg-primary-600">
-                      Subscribe Now
-                    </button>
-                  </div>
-                </form>
               </div>
             </div>
           </div>
@@ -341,7 +328,7 @@ export default function Footer() {
         <div className="container relative z-10 px-5 mx-auto sm:px-7">
           <div className="py-5 text-center">
             <p className="text-sm text-gray-500">
-              &copy; {getCurrentYear()} AiStarterKit - All Rights Reserved.
+              &copy; {getCurrentYear()} Brand Elevate - All Rights Reserved.
             </p>
           </div>
         </div>
