@@ -1,15 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
+  trailingSlash: true,
+
+  basePath: "/myapp",
+  assetPrefix: "/myapp/",
+
   images: {
-    remotePatterns: [
-      {
-        hostname: "avatars.githubusercontent.com",
-      },
-      {
-        hostname: "lh3.googleusercontent.com",
-      },
-    ],
+    unoptimized: true, // 🔥 REQUIRED for static export
   },
 };
 

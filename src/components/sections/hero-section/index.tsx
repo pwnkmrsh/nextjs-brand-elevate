@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { asset } from '@/lib/assets';
+
 import Link from 'next/link';
 import HeroLogos from '../hero-logos';
 import { Subheading } from './subheading';
@@ -36,12 +38,13 @@ export default function HeroSection() {
           <div className="max-w-[1000px] mx-auto relative">
             <div className="p-3 sm:p-[18px] relative z-30 rounded-[32px] border border-white/30 dark:border-white/10 bg-white/20">
               <Image
-                src="/images/hero/hero-img.jpg"
-                alt=""
+                src={asset("/images/hero/hero-img.jpg")}
+                alt="Hero image"
                 className="w-full rounded-2xl block dark:hidden"
                 width={966}
                 height={552}
               />
+
               <Image
                 src="/images/hero/hero-img-dark.png"
                 alt=""
