@@ -11,6 +11,8 @@ import { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { toast } from 'sonner';
+import { login } from '@/lib/api';
+import { useRouter } from 'next/navigation';
 
 type Inputs = z.infer<typeof authValidation.login>;
 
@@ -31,18 +33,26 @@ export default function SignInForm() {
     setIsShowPassword(!isShowPassword);
   };
 
+  const router = useRouter();
+
   async function onSubmit(data: Inputs) {
     setIsLoading(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate API call
+    try {
+      const response = await login(data);
 
-    toast.success(
-      <pre>
-        <code>{JSON.stringify(data, null, 2)}</code>
-      </pre>
-    );
+      // Example: save token
+      localStorage.setItem('token', response.token);
 
-    setIsLoading(false);
+      toast.success('Logged in successfully 🎉');
+      console.log(response);
+      router.push('/account');
+
+    } catch (error: any) {
+      toast.error(error.message || 'Login failed');
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (

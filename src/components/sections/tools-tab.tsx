@@ -2,6 +2,7 @@
 
 import type React from 'react';
 import { Fragment, useState } from 'react';
+import { asset } from '@/lib/assets';
 
 import {
   CodeGeneratorIcon,
@@ -33,8 +34,9 @@ export default function AIToolsTabs() {
       id: 'text',
       label: 'Text Generator',
       icon: <TextGeneratorIcon className="w-8 h-8" />,
-      lightImage: '/images/tab-image/tab-image-1.jpg',
-      darkImage: '/images/tab-image/tab-image-1-dark.jpg',
+      lightImage: asset('/images/tab-image/tab-image-1.jpg'),
+      darkImage: asset('/images/tab-image/tab-image-1-dark.jpg'),
+
       title: 'Easiest way to generate text',
       description:
         'Unlock the Potential of Innovation. Discover the Advanced AI Tools Transforming Your Ideas into Reality with Unmatched Precision and Intelligence.',
@@ -43,8 +45,8 @@ export default function AIToolsTabs() {
       id: 'image',
       label: 'Image Generator',
       icon: <ImageGeneratorIcon className="w-8 h-8" />,
-      lightImage: '/images/tab-image/tab-image-2.jpg',
-      darkImage: '/images/tab-image/tab-image-2-dark.jpg',
+      lightImage: asset('/images/tab-image/tab-image-2.jpg'),
+      darkImage: asset('/images/tab-image/tab-image-2-dark.jpg'),
       title: 'Create stunning images with AI',
       description:
         'Unlock the Potential of Innovation. Discover the Advanced AI Tools Transforming Your Ideas into Reality with Unmatched Precision and Intelligence.',
@@ -53,8 +55,8 @@ export default function AIToolsTabs() {
       id: 'code',
       label: 'Code Generator',
       icon: <CodeGeneratorIcon className="w-8 h-8" />,
-      lightImage: '/images/tab-image/tab-image-3.jpg',
-      darkImage: '/images/tab-image/tab-image-3-dark.jpg',
+      lightImage: asset('/images/tab-image/tab-image-3.jpg'),
+      darkImage: asset('/images/tab-image/tab-image-3-dark.jpg'),
       title: 'Generate code in any language',
       description:
         'Unlock the Potential of Innovation. Discover the Advanced AI Tools Transforming Your Ideas into Reality with Unmatched Precision and Intelligence.',
@@ -63,8 +65,8 @@ export default function AIToolsTabs() {
       id: 'video',
       label: 'Video Generator',
       icon: <VideoGeneratorIcon className="w-8 h-8" />,
-      lightImage: '/images/tab-image/tab-image-4.jpg',
-      darkImage: '/images/tab-image/tab-image-4-dark.jpg',
+      lightImage: asset('/images/tab-image/tab-image-4.jpg'),
+      darkImage: asset('/images/tab-image/tab-image-4-dark.jpg'),
       title: 'Create engaging videos with AI',
       description:
         'Unlock the Potential of Innovation. Discover the Advanced AI Tools Transforming Your Ideas into Reality with Unmatched Precision and Intelligence.',
@@ -73,8 +75,8 @@ export default function AIToolsTabs() {
       id: 'email',
       label: 'Email Generator',
       icon: <EmailGeneratorIcon className="w-8 h-8" />,
-      lightImage: '/images/tab-image/tab-image-5.jpg',
-      darkImage: '/images/tab-image/tab-image-5-dark.jpg',
+      lightImage: asset('/images/tab-image/tab-image-5.jpg'),
+      darkImage: asset('/images/tab-image/tab-image-5-dark.jpg'),
       title: 'Write professional emails instantly',
       description:
         'Unlock the Potential of Innovation. Discover the Advanced AI Tools Transforming Your Ideas into Reality with Unmatched Precision and Intelligence.',
@@ -107,11 +109,10 @@ export default function AIToolsTabs() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`flex items-center h-12 gap-2 px-4 py-3 text-sm font-medium transition-colors duration-200 rounded-full ${
-                      activeTab === tab.id
-                        ? 'bg-white dark:text-white/90 dark:bg-white/10 text-gray-800'
-                        : 'text-gray-500 dark:text-gray-400 bg-transparent'
-                    }`}
+                    className={`flex items-center h-12 gap-2 px-4 py-3 text-sm font-medium transition-colors duration-200 rounded-full ${activeTab === tab.id
+                      ? 'bg-white dark:text-white/90 dark:bg-white/10 text-gray-800'
+                      : 'text-gray-500 dark:text-gray-400 bg-transparent'
+                      }`}
                   >
                     {tab.icon}
                     <span className="truncate">{tab.label}</span>

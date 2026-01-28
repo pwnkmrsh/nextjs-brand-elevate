@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
 
   images: {
     unoptimized: true, // 🔥 REQUIRED for static export
+    qualities: [75, 80, 85, 90, 95, 100],
+
   },
 };
 
