@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import DesktopNav from '../layout/header/desktop-nav';
 import ThemeToggle from '../layout/header/theme-toggle';
+import {asset} from '@/lib/assets';
 
 export default function GeneratorHeader({
   toggleSidebar,
@@ -35,14 +36,14 @@ export default function GeneratorHeader({
               <div className="flex items-center">
                 <Link href="/">
                   <Image
-                    src="/images/logo-black.svg"
+                    src={asset("/images/logo-black.svg")}
                     className="block dark:hidden"
                     width={180}
                     height={30}
                     alt="AiStarterKit Logo"
                   />
                   <Image
-                    src="/images/logo-white.svg"
+                    src={asset("/images/logo-white.svg")}
                     className="hidden dark:block"
                     width={180}
                     height={30}

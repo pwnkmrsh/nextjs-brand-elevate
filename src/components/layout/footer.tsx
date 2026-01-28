@@ -1,6 +1,7 @@
 import { getCurrentYear } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import {asset} from '@/lib/assets';
 
 export default function Footer() {
   return (
@@ -48,7 +49,7 @@ export default function Footer() {
               <div>
                 <Link href="/" className="block mb-6">
                   <Image
-                    src="/images/logo-white.svg"
+                    src={asset("/images/logo-white.svg")}
                     alt="logo"
                     width={128}
                     height={32}

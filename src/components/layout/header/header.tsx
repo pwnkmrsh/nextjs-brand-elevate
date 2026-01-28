@@ -7,6 +7,7 @@ import DesktopNav from './desktop-nav';
 import MainMobileNav from './main-mobile-nav';
 import ThemeToggle from './theme-toggle';
 import { usePathname } from 'next/navigation';
+import {asset} from '@/lib/assets';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,17 +24,17 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-end gap-2">
               <Image
-                src="/images/logo-black.svg"
+                src={asset("/images/logo-black.svg")}
                 className="block dark:hidden"
-                alt="AiStarterKit Logo"
+                alt="AiStarterKit light"
                 width={180}
                 height={30}
               />
 
               <Image
-                src="/images/logo-white.svg"
+                src={asset("/images/logo-white.svg")}
                 className="hidden dark:block"
-                alt="AiStarterKit Logo"
+                alt="AiStarterKit dark"
                 width={180}
                 height={30}
               />

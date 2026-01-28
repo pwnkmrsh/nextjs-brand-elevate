@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import {asset} from '@/lib/assets';
 
 export default function NotFoundPage() {
   return (
@@ -69,14 +70,14 @@ export default function NotFoundPage() {
         <Image
           width={450}
           height={240}
-          src="/images/404.svg"
+          src={asset("/images/404.svg")}
           className="mb-10 block dark:hidden"
           alt=""
         />
         <Image
           width={450}
           height={240}
-          src="/images/404-white.svg"
+          src={asset("/images/404-white.svg")}
           className="mb-10 hidden dark:block"
           alt=""
         />
